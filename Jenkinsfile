@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Cloning our Git') {
             steps {
-                  sh 'rm -rf dockertest1'
+                  sh 'rm -rf jenkins_test'
                    sh "git clone ${GIT_URL}"        
             }
         }

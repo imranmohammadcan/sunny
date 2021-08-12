@@ -11,7 +11,6 @@ pipeline {
                    sh "git clone ${GIT_URL}"        
             }
         }
-    stages {
         stage('Build') { 
             steps {
                echo 'building the application..'
@@ -29,5 +28,4 @@ pipeline {
             }
         }
     }
-}
 }

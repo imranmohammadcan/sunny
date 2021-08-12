@@ -29,8 +29,6 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo 'deplying the application'
-                sh 'docker stop webapp23'
-                sh 'docker rm -f $(docker ps -aq)'
                 sh 'docker run --rm -dit --name webapp23 --hostname webapp23 -p 9002:80 imran319/sunny:v23'
             }
         }
